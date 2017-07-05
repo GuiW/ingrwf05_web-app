@@ -1,8 +1,7 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 980px;
-  margin: 0 auto;
+  margin: 0 10%;
   background: #212121;
   color: #f4f4f4;
   font-family: arial; }
