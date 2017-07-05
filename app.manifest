@@ -1,0 +1,12 @@
+CACHE MANIFEST
+
+# 2017-06-05 v0.0.1
+
+CACHE:
+index.html
+script/main.js
+style/css/style.css
+node_modules/jquery/dist/jquery.min.js
+
+NETWORK:
+*
