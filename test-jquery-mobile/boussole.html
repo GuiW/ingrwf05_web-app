@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Boussole</title>
+</head>
+<body>
+  <div id="map" style="width:640px;height:480px"></div>
+    <script>
+      function Main(){
+        var gosselies = {lat: 50.4707896, lng: 4.4686463};
+        var map = new google.maps.Map(document.querySelector('#map'), {
+          zoom: 15,
+          center: gosselies
+        });
+        var marker = new google.maps.Marker({
+          position: gosselies,
+          map: map,
+          label: "Cepegra - Forem",
+          title: "C'est ouvert!"
+        });
+      }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNblLqsb-BhbwbjhMek6pkcchb0A18wnI&callback=Main"></script>
+  </div>
+</body>
+</html>

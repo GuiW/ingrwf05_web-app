@@ -1,21 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" manifest="app.manifest">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
   <title>Document</title>
   <link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.4.5.css">
+  <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
-  <div id="accueil" data-role="page" data-theme="b">
-    <div data-role="header">
-      Titre
+  <section id="accueil" data-role="page" data-fullscreen="true" data-theme="a">
+    <header data-role="header">
+      <a href="" data-rel="back">Back</a>
+      <h1>Titre</h1>
+    </header>
+    <div data-role="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure quos est animi maxime quae. Ut dicta, veritatis, eos illo vel deleniti non consequatur, totam tempore quasi corrupti adipisci. Maxime mollitia ex odio aspernatur commodi autem, repellendus id soluta sequi adipisci qui blanditiis maiores voluptas placeat laudantium possimus officia, voluptates cupiditate!</p>
+      <div data-role="controlgroup">
+        <a href="#carnet" data-role="button">Carnet</a>
+        <a href="about.html" data-role="button" data-transition="pop" data-rel="dialog">About</a>
+        <a href="#contact" data-role="button">Contactez-nous</a>
+        <a href="geo.html" data-role="button" data-transition="pop" data-rel="dialog">Geolocalisation</a>
+      </div>
     </div>
-    <h1>Yo</h1>
-  </div>
+    <footer data-role="footer" data-position="fixed">
+      <p>&copy; Guillaume Wilmotte - Cepegra 2017</p>
+      <nav data-role="navbar">
+        <ul>
+          <li><a href="#accueil" data-icon="home" data-theme="b" data-transition="pop" data-rel="dialog"></a></li>
+          <li><a href="#contact" data-icon="mail" data-theme="b" data-transition="pop" data-rel="dialog"></a></li>
+          <li><a href="about.html" data-icon="user" data-theme="b" data-transition="pop" data-rel="dialog"></a></li>
+        </ul>
+      </nav>
+    </footer>
+  </section>
+
+  <section id="carnet" data-role="page" data-fullscreen="true" data-theme="b">
+    <header data-role="header">
+      <a href="" data-rel="back">Back</a>
+      <h1>Les membres</h1>
+    </header>
+    <div data-role="content">
+      <ul data-role="listview">
+        <li><a href="pierre.html">Pierre</a></li>
+        <li>Benoit</li>
+      </ul>
+    </div>
+    <p><a href="#accueil">Accueil</a></p>
+    <footer data-role="footer" data-position="fixed">
+      &copy; Guillaume Wilmotte - Cepegra 2017
+    </footer>
+  </section>
+
+  <section id="contact" data-role="page" data-fullscreen="true" data-theme="a">
+    <header data-role="header">
+      <a href="" data-rel="back">Back</a>
+      <h1>Contactez-nous</h1>
+    </header>
+    <div data-role="content">
+      <form>
+        <input type="text" name="nom" placeholder="Votre nom">
+        <input type="email" name="email" placeholder="Votre email">
+        <textarea rows="" cols="" placeholder="Votre message"></textarea>
+        <label for="satisfaction">Satisfaction du service</label>
+        <input type="range" id="satisfaction" min="1" max="5" value="2" name="satisfaction">
+
+        <fieldset data-role="fieldcontain">
+          <label for="inscription">Newsletter?</label>
+          <select name="inscription" id="inscription" data-role="slider">
+            <option value="o">Oui</option>
+            <option value="n">Non</option>
+          </select>
+        </fieldset>
+
+        <fieldset data-role="controlgroup" data-type="horizontal">
+          <legend>Sexe:</legend>
+          <input type="radio" id="genreM" name="genre" value="M">
+          <label for="genreM">Masculin</label>
+          <input type="radio" id="genreF" name="genre" value="F">
+          <label for="genreF">Féminin</label>
+        </fieldset>
+
+        <label for="ddn">Date de naissance :</label>
+        <input type="date" id="ddn" name="ddn">
+        
+        <button data-inline="true">Envoyer</button>
+      </form>
+    <p><a href="#accueil">Accueil</a></p>
+    <footer data-role="footer" data-position="fixed">
+      &copy; Guillaume Wilmotte - Cepegra 2017
+    </footer>
+  </section>
 
   <script src="../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="jquery-mobile/jquery.mobile-1.4.5.js"></script>
+  <script src="jmobile.js"></script>
 </body>
 </html>

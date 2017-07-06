@@ -1,0 +1,17 @@
+CACHE MANIFEST
+
+# 2017-07-06 v0.0.1
+
+CACHE:
+index.html
+about.html
+pierre.html
+jmobile.js
+jquery-mobile/jquery.mobile-1.4.5.js
+jquery-mobile/jquery.mobile-1.4.5.css
+jquery-mobile/images/
+../node_modules/jquery/dist/jquery.min.js
+
+
+NETWORK:
+*
