@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>Rail</title>
+
+  <link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.4.5.css">
+
+</head>
+<body>
+
+<!-- ACCEUIL -->
+  <section id="trains" data-role="page" data-fullscreen="true" data-theme="a">
+
+  <!-- Header -->
+    <header data-role="header">
+      <a href="" data-rel="back" data-icon="back" data-theme="b">&nbsp;</a>
+      <h1>Trains</h1>
+    </header>
+
+  <!-- Content -->
+    <div data-role="content">
+      <h2>Trains au départ de <span id="gareName"></span></h2>
+      <div data-role="collapsible-set" id="listeTrains">
+        <!--<div data-role="collapsible">
+          <h3>Namur</h3>
+          <p>Horaire1</p>
+        </div>-->
+      </div>
+    </div>
+
+  <!-- Footer-->
+    <footer data-id="footer" data-role="footer" data-position="fixed">
+      <p>&copy; Guillaume Wilmotte - Cepegra 2017</p>
+      <nav data-role="navbar">
+        <ul>
+          <li><a href="#accueil" data-icon="home" data-theme="b" data-transition="pop" data-rel="dialog"></a></li>
+          <li><a href="favoris.html" data-icon="star" data-theme="b" data-transition="pop"></a></li>
+          <li><a href="parametre.html" data-icon="gear" data-theme="b" data-transition="pop"></a></li>
+        </ul>
+      </nav>
+    </footer>
+  </section>
+
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="jquery-mobile/jquery.mobile-1.4.5.js"></script>
+  <script src="rail.js"></script>
+</body>
+</html>

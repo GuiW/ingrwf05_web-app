@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>Rail</title>
+
+  <link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.4.5.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- ACCEUIL -->
+  <section id="accueil" data-role="page" data-fullscreen="true" data-theme="a">
+
+  <!-- Header -->
+    <header data-role="header">
+      <a href="" data-rel="back" data-icon="back" data-theme="b">&nbsp;</a>
+      <h1>RailTouch</h1>
+    </header>
+
+  <!-- Content -->
+    <div data-role="content">
+      <p>Votre train est-il à l'heure ?</p>
+      <a href="#listing" data-role="button" data-transition="pop">Allons-y</a>
+    </div>
+
+  <!-- Footer-->
+    <footer data-id="footer" data-role="footer" data-position="fixed">
+      <p>&copy; Guillaume Wilmotte - Cepegra 2017</p>
+      <nav data-role="navbar">
+        <ul>
+          <li><a href="#accueil" data-icon="home" data-theme="b" data-transition="pop" data-rel="dialog"></a></li>
+          <li><a href="favoris.html" data-icon="star" data-theme="b" data-transition="pop"></a></li>
+          <li><a href="parametre.html" data-icon="gear" data-theme="b" data-transition="pop"></a></li>
+        </ul>
+      </nav>
+    </footer>
+  </section>
+
+<!-- LISTING -->
+  <section id="listing" data-fullscreen="true" data-role="page" data-theme="a">
+
+  <!-- Header -->
+    <header data-role="header">
+      <a href="" data-rel="back" data-icon="back" data-theme="b">&nbsp;</a>
+      <h1>Listing</h1>
+    </header>
+
+  <!-- Content -->
+    <div data-role="content">
+    <!-- Slider des kilomètes -->
+      <div data-role="fieldcontain">
+        <input type="range" id="rayon" min="5" max="50" name="rayon" step="5" value="10">
+      </div>
+    <!-- List de gares -->
+      <!-- data-filter ajoute un champ de recherche à la list -->
+      <!-- data-autodividers regroupe les gares par lettre -->
+      <!-- data-inset permet à la liste de ne par être collée sur les bords -->
+      <ul data-role="listview" data-filter="true" data-filter-placeholder="Rechercher une gare" data-autodividers="true" data-inset="true" id="listeGares">
+        <li><a href="">Bruxelles</a></li>
+        <li><a href="trains.html">Charleroi</a></li>
+        <li><a href="">Ciney</a></li>
+        <li><a href="">Liège</a></li>
+      </ul>
+    </div>
+
+  <!-- Footer-->
+    <footer data-id="footer" data-role="footer" data-position="fixed">
+      <p>&copy; Guillaume Wilmotte - Cepegra 2017</p>
+      <nav data-role="navbar">
+        <ul>
+          <li><a href="#accueil" data-icon="home" data-theme="b" data-transition="pop"></a></li>
+          <li><a href="favoris.html" data-icon="star" data-theme="b" data-transition="pop"></a></li>
+          <li><a href="parametre.html" data-icon="gear" data-theme="b" data-transition="pop"></a></li>
+        </ul>
+      </nav>
+    </footer>
+  </section>
+
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="jquery-mobile/jquery.mobile-1.4.5.js"></script>
+  <script src="rail.js"></script>
+</body>
+</html>

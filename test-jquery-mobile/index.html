@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="fr" manifest="app.manifest">
+<!-- manifest="app.manifest" -->
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,7 @@
     <header data-role="header">
       <a href="" data-rel="back">Back</a>
       <h1>Titre</h1>
+      <h2>Changement</h2>
     </header>
     <div data-role="content">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure quos est animi maxime quae. Ut dicta, veritatis, eos illo vel deleniti non consequatur, totam tempore quasi corrupti adipisci. Maxime mollitia ex odio aspernatur commodi autem, repellendus id soluta sequi adipisci qui blanditiis maiores voluptas placeat laudantium possimus officia, voluptates cupiditate!</p>
@@ -23,7 +25,7 @@
         <a href="#carnet" data-role="button">Carnet</a>
         <a href="about.html" data-role="button" data-transition="pop" data-rel="dialog">About</a>
         <a href="#contact" data-role="button">Contactez-nous</a>
-        <a href="geo.html" data-role="button" data-transition="pop" data-rel="dialog">Geolocalisation</a>
+        <a href="geo.html" data-role="button" data-transition="pop" >Geolocalisation</a>
       </div>
     </div>
     <footer data-role="footer" data-position="fixed">
@@ -98,5 +100,6 @@
   <script src="../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="jquery-mobile/jquery.mobile-1.4.5.js"></script>
   <script src="jmobile.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNblLqsb-BhbwbjhMek6pkcchb0A18wnI&callback=Geolocalisation"></script>
 </body>
 </html>
